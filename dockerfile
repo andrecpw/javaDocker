@@ -1,9 +1,9 @@
 FROM openjdk:8-alpine
 
-WORKDIR /src/main/java/space.harbour
+WORKDIR /app
 
-COPY Main.java .
+COPY src/main/java/space/harbour/Main.java ./space/harbour/
 
-RUN javac Main.java
+RUN javac ./space/harbour/Main.java
 
-CMD ["java", "Main"]
+CMD ["java", "space.harbour.Main"]
